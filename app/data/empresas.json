@@ -1,0 +1,8 @@
+
+[
+    {"empresa": "SolarTech SP", "estado": "SP", "preco_kwh": 0.72, "beneficios": "Desconto 15%, sem fidelidade"},
+    {"empresa": "Energia Verde RJ", "estado": "RJ", "preco_kwh": 0.68, "beneficios": "Painéis 100% sustentáveis"},
+    {"empresa": "LuzSolar MG", "estado": "MG", "preco_kwh": 0.65, "beneficios": "Plano mensal flexível"},
+    {"empresa": "EcoNordeste", "estado": "CE", "preco_kwh": 0.63, "beneficios": "Créditos de energia acumuláveis"},
+    {"empresa": "Sul Solar SC", "estado": "SC", "preco_kwh": 0.70, "beneficios": "Suporte 24h, instalação rápida"}
+]

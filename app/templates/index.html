@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>ReloadBR Solar</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="ReloadBR Solar" class="logo">
+        <h1>Comparador de Energia Solar por Assinatura</h1>
+    </header>
+    <main>
+        <form method="get" action="/buscar">
+            <input type="text" name="estado" placeholder="Digite seu estado (ex: SP)" required>
+            <button type="submit">Buscar Ofertas</button>
+        </form>
+        {% if resultados %}
+        <section class="resultados">
+            <h2>Resultados para {{ estado }}</h2>
+            <table>
+                <tr><th>Empresa</th><th>Preço (kWh)</th><th>Benefícios</th></tr>
+                {% for item in resultados %}
+                    <tr>
+                        <td>{{ item['empresa'] }}</td>
+                        <td>R$ {{ item['preco_kwh'] }}</td>
+                        <td>{{ item['beneficios'] }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </section>
+        {% endif %}
+    </main>
+    <footer>
+        <p>ReloadBR Solar © 2025 — Energia inteligente, limpa e acessível.</p>
+    </footer>
+</body>
+</html>
