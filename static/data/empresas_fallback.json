@@ -1,0 +1,37 @@
+[
+  {
+    "nome": "SolarTech Brasil",
+    "estado": "SP",
+    "preco_kwh": 0.72,
+    "beneficios": "Contrato flexível, instalação inclusa",
+    "site": "https://solartec.com.br"
+  },
+  {
+    "nome": "EcoEnergia Solar",
+    "estado": "SP",
+    "preco_kwh": 0.68,
+    "beneficios": "Desconto no boleto, manutenção",
+    "site": "https://ecoenergia.com.br"
+  },
+  {
+    "nome": "SolMais Energia",
+    "estado": "MG",
+    "preco_kwh": 0.65,
+    "beneficios": "Plano mensal com créditos",
+    "site": "https://solmais.com.br"
+  },
+  {
+    "nome": "LuzVerde Solar",
+    "estado": "RJ",
+    "preco_kwh": 0.7,
+    "beneficios": "Suporte 24h",
+    "site": "https://luzverde.com.br"
+  },
+  {
+    "nome": "Enova Solar",
+    "estado": "PR",
+    "preco_kwh": 0.69,
+    "beneficios": "Financiamento facilitado",
+    "site": "https://enova.com.br"
+  }
+]

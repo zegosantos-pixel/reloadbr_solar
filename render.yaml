@@ -1,0 +1,7 @@
+
+services:
+  - type: web
+    name: reloadbr-solar
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn app:app"
