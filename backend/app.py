@@ -2,7 +2,7 @@ import os
 from flask import Flask, render_template, request, jsonify, send_from_directory
 import json
 from datetime import datetime
-from models import db, Provider
+from backend.models import db, Provider
 
 app = Flask(__name__, template_folder='templates', static_folder='static')
 DATABASE_URL = os.environ.get('DATABASE_URL', 'sqlite:///reloadbr.db')
