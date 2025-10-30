@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReloadBR Solar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/logo.png') }}">
+</head>
+<body class="bg-gray-50 font-sans">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm py-6 mb-8">
+        <div class="max-w-5xl mx-auto flex items-center justify-center space-x-4">
+            <img src="{{ url_for('static', filename='img/logo.png') }}" alt="ReloadBR Solar" class="w-16 h-16">
+            <div>
+                <h1 class="text-3xl font-bold text-green-700">ReloadBR Solar</h1>
+                <p class="text-gray-600 text-sm">Compare planos de energia solar por assinatura no Brasil</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Section -->
+    <main class="max-w-3xl mx-auto px-4">
+        <!-- Filtro de Região -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3 mb-6">
+            <select id="regiao" class="border border-gray-300 rounded-lg px-4 py-2 w-60 focus:ring-2 focus:ring-blue-500">
+                <option value="">Escolha a Região</option>
+                <option value="Sudeste">Sudeste</option>
+                <option value="Sul">Sul</option>
+                <option value="Centro-Oeste">Centro-Oeste</option>
+                <option value="Nordeste">Nordeste</option>
+                <option value="Norte">Norte</option>
+            </select>
+            <button id="buscarBtn" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">Buscar</button>
+        </div>
+
+        <!-- Lista de empresas -->
+        <div id="empresas-lista" class="space-y-4">
+            {% for empresa in empresas %}
+            <div class="bg-white p-5 rounded-xl shadow hover:shadow-md transition">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <h2 class="text-xl font-semibold text-green-700">{{ empresa.nome }}</h2>
+                        <p class="text-gray-600">{{ empresa.regiao }}</p>
+                    </div>
+                    <div class="text-right">
+                        <p class="text-lg font-bold text-gray-900">R$ {{ empresa.preco_kwh }} / kWh</p>
+                        <a href="{{ empresa.site }}" target="_blank" class="text-blue-600 hover:underline text-sm">Visitar site</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-10 py-6 text-center text-gray-500 text-sm border-t">
+        <p>© 2025 ReloadBR Solar — Projeto de comparação de energia solar por assinatura</p>
+    </footer>
+
+    <script>
+        // Filtro de empresas por região
+        document.getElementById('buscarBtn').addEventListener('click', function() {
+            const regiao = document.getElementById('regiao').value.toLowerCase();
+            const cards = document.querySelectorAll('#empresas-lista > div');
+            cards.forEach(card => {
+                const texto = card.innerText.toLowerCase();
+                if (!regiao || texto.includes(regiao)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
