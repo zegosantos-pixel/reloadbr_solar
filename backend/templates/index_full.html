@@ -11,18 +11,18 @@
 
     <!-- Header -->
     <header class="bg-white shadow-sm py-6 mb-8">
-        <div class="max-w-5xl mx-auto flex items-center justify-center space-x-4">
-            <img src="{{ url_for('static', filename='img/logo.png') }}" alt="ReloadBR Solar" class="w-16 h-16">
+        <div class="max-w-4xl mx-auto flex items-center justify-center space-x-4">
+            <img src="{{ url_for('static', filename='img/logo.png') }}" alt="ReloadBR Solar" class="w-14 h-14">
             <div>
                 <h1 class="text-3xl font-bold text-green-700">ReloadBR Solar</h1>
-                <p class="text-gray-600 text-sm">Compare planos de energia solar por assinatura no Brasil</p>
+                <p class="text-gray-600 text-base">Compare planos de energia solar por assinatura no Brasil.</p>
             </div>
         </div>
     </header>
 
     <!-- Main Section -->
-    <main class="max-w-3xl mx-auto px-4">
-        <!-- Filtro de Região -->
+    <main class="max-w-2xl mx-auto px-4">
+        <!-- Filtro -->
         <div class="flex flex-col sm:flex-row items-center justify-center gap-3 mb-6">
             <select id="regiao" class="border border-gray-300 rounded-lg px-4 py-2 w-60 focus:ring-2 focus:ring-blue-500">
                 <option value="">Escolha a Região</option>
@@ -35,20 +35,19 @@
             <button id="buscarBtn" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">Buscar</button>
         </div>
 
-        <!-- Lista de empresas -->
+        <!-- Ranking de empresas -->
         <div id="empresas-lista" class="space-y-4">
             {% for empresa in empresas %}
-            <div class="bg-white p-5 rounded-xl shadow hover:shadow-md transition">
-                <div class="flex justify-between items-center">
+            <div class="bg-white p-5 rounded-xl shadow hover:shadow-md transition flex justify-between items-start">
+                <div class="flex items-start gap-4">
+                    <div class="bg-gray-100 rounded-full w-8 h-8 flex items-center justify-center font-semibold text-gray-700">{{ loop.index }}</div>
                     <div>
-                        <h2 class="text-xl font-semibold text-green-700">{{ empresa.nome }}</h2>
-                        <p class="text-gray-600">{{ empresa.regiao }}</p>
-                    </div>
-                    <div class="text-right">
-                        <p class="text-lg font-bold text-gray-900">R$ {{ empresa.preco_kwh }} / kWh</p>
-                        <a href="{{ empresa.site }}" target="_blank" class="text-blue-600 hover:underline text-sm">Visitar site</a>
+                        <h2 class="text-lg font-semibold text-gray-900">{{ empresa.nome }}</h2>
+                        <p class="text-gray-700 font-medium">R$ {{ empresa.preco_kwh }}/kWh</p>
+                        <p class="text-gray-500 text-sm">{{ empresa.condicao }}</p>
                     </div>
                 </div>
+                <a href="{{ empresa.site }}" target="_blank" class="text-blue-600 hover:underline font-medium">Visitar site</a>
             </div>
             {% endfor %}
         </div>
@@ -56,25 +55,20 @@
 
     <!-- Footer -->
     <footer class="mt-10 py-6 text-center text-gray-500 text-sm border-t">
-        <p>© 2025 ReloadBR Solar — Projeto de comparação de energia solar por assinatura</p>
+        <p>© 2025 ReloadBR Solar — Ranking de energia solar por assinatura no Brasil</p>
     </footer>
 
     <script>
-        // Filtro de empresas por região
+        // Filtro simples no navegador
         document.getElementById('buscarBtn').addEventListener('click', function() {
             const regiao = document.getElementById('regiao').value.toLowerCase();
             const cards = document.querySelectorAll('#empresas-lista > div');
             cards.forEach(card => {
                 const texto = card.innerText.toLowerCase();
-                if (!regiao || texto.includes(regiao)) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
+                card.style.display = (!regiao || texto.includes(regiao)) ? 'flex' : 'none';
             });
         });
     </script>
 
 </body>
 </html>
-
