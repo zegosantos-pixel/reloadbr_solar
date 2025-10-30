@@ -10,7 +10,8 @@ app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URL
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db.init_app(app)
 
-@app.before_first_request
+with app.app_context():
+    db.create_all()
 def create_tables():
     db.create_all()
 
