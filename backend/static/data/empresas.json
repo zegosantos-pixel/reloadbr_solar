@@ -1,26 +1,30 @@
 [
-  {
-    "nome": "SolarTech Brasil",
-    "estado": "SP",
-    "preco_kwh": 0.72,
-    "beneficios": "Contrato flexível",
-    "site": "https://solartec.com.br",
-    "relevancia": 90
-  },
-  {
-    "nome": "EcoEnergia Solar",
-    "estado": "SP",
-    "preco_kwh": 0.68,
-    "beneficios": "Desconto no boleto",
-    "site": "https://ecoenergia.com.br",
-    "relevancia": 95
-  },
-  {
-    "nome": "SolMais Energia",
-    "estado": "MG",
-    "preco_kwh": 0.65,
-    "beneficios": "Plano mensal",
-    "site": "https://solmais.com.br",
-    "relevancia": 85
-  }
+    {
+        "nome": "SunTech Solar",
+        "preco_kwh": 0.72,
+        "condicao": "Desconto médio 12%",
+        "site": "https://suntechsolar.com.br",
+        "relevancia": 8.9
+    },
+    {
+        "nome": "Verde Energia",
+        "preco_kwh": 0.68,
+        "condicao": "Espera para adesão",
+        "site": "https://verdeenergia.com.br",
+        "relevancia": 9.2
+    },
+    {
+        "nome": "BluePower",
+        "preco_kwh": 0.75,
+        "condicao": "Programa de fidelidade",
+        "site": "https://bluepower.com.br",
+        "relevancia": 8.3
+    },
+    {
+        "nome": "EcoLuz Assinaturas",
+        "preco_kwh": 0.70,
+        "condicao": "Cashback 5%",
+        "site": "https://ecoluz.com.br",
+        "relevancia": 8.5
+    }
 ]
