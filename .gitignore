@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+backend/app_backup.py
+backend/scraping_backup.py
