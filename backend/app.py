@@ -1,3 +1,8 @@
+from scraping import agendar_atualizacao
+
+# Inicia o agendamento automático de scraping semanal
+agendar_atualizacao()
+
 import json
 from flask import Flask, render_template
 import os
