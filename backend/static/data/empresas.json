@@ -1,30 +1,30 @@
-[
-    {
-        "nome": "SunTech Solar",
-        "preco_kwh": 0.72,
-        "condicao": "Desconto médio 12%",
-        "site": "https://suntechsolar.com.br",
-        "relevancia": 8.9
-    },
-    {
-        "nome": "Verde Energia",
-        "preco_kwh": 0.68,
-        "condicao": "Espera para adesão",
-        "site": "https://verdeenergia.com.br",
-        "relevancia": 9.2
-    },
-    {
-        "nome": "BluePower",
-        "preco_kwh": 0.75,
-        "condicao": "Programa de fidelidade",
-        "site": "https://bluepower.com.br",
-        "relevancia": 8.3
-    },
-    {
-        "nome": "EcoLuz Assinaturas",
-        "preco_kwh": 0.70,
-        "condicao": "Cashback 5%",
-        "site": "https://ecoluz.com.br",
-        "relevancia": 8.5
-    }
-]
+{
+  "ultima_atualizacao": "05/11/2025 12:00",
+  "empresas": [
+    {"nome": "SolarTech Brasil", "cidade": "São Paulo - SP", "preco_medio": 4.50, "relevancia": 9.8},
+    {"nome": "Energia Pura", "cidade": "Curitiba - PR", "preco_medio": 4.30, "relevancia": 9.6},
+    {"nome": "LuzSolar", "cidade": "Belo Horizonte - MG", "preco_medio": 4.10, "relevancia": 9.5},
+    {"nome": "EcoSun", "cidade": "Fortaleza - CE", "preco_medio": 3.90, "relevancia": 9.4},
+    {"nome": "Verde Solar", "cidade": "Recife - PE", "preco_medio": 3.70, "relevancia": 9.3},
+    {"nome": "Photon Energia", "cidade": "Porto Alegre - RS", "preco_medio": 4.00, "relevancia": 9.2},
+    {"nome": "Helios Power", "cidade": "Goiânia - GO", "preco_medio": 3.85, "relevancia": 9.1},
+    {"nome": "SunVolt Engenharia", "cidade": "Brasília - DF", "preco_medio": 4.20, "relevancia": 9.0},
+    {"nome": "Nova Luz Solar", "cidade": "Campinas - SP", "preco_medio": 4.15, "relevancia": 8.9},
+    {"nome": "Ecovolt Energia", "cidade": "Salvador - BA", "preco_medio": 3.95, "relevancia": 8.8},
+    {"nome": "Solaris Group", "cidade": "Rio de Janeiro - RJ", "preco_medio": 4.35, "relevancia": 8.7},
+    {"nome": "Brasil Solar", "cidade": "Florianópolis - SC", "preco_medio": 3.80, "relevancia": 8.6},
+    {"nome": "SolPower Brasil", "cidade": "Natal - RN", "preco_medio": 3.75, "relevancia": 8.5},
+    {"nome": "EnerSolar Engenharia", "cidade": "Uberlândia - MG", "preco_medio": 3.70, "relevancia": 8.4},
+    {"nome": "SunLife Energia", "cidade": "Vitória - ES", "preco_medio": 4.05, "relevancia": 8.3},
+    {"nome": "Pura Energia Solar", "cidade": "Aracaju - SE", "preco_medio": 3.65, "relevancia": 8.2},
+    {"nome": "EnerBras", "cidade": "Campo Grande - MS", "preco_medio": 3.95, "relevancia": 8.1},
+    {"nome": "SolarWay", "cidade": "Belém - PA", "preco_medio": 4.10, "relevancia": 8.0},
+    {"nome": "BlueSun Energia", "cidade": "Joinville - SC", "preco_medio": 3.85, "relevancia": 7.9},
+    {"nome": "Gaia Solar", "cidade": "Manaus - AM", "preco_medio": 3.60, "relevancia": 7.8},
+    {"nome": "SunPrime Engenharia", "cidade": "Londrina - PR", "preco_medio": 3.95, "relevancia": 7.7},
+    {"nome": "SolLight Brasil", "cidade": "Maringá - PR", "preco_medio": 3.90, "relevancia": 7.6},
+    {"nome": "Solar Mais", "cidade": "Niterói - RJ", "preco_medio": 3.80, "relevancia": 7.5},
+    {"nome": "MaxEnergia", "cidade": "Cuiabá - MT", "preco_medio": 3.75, "relevancia": 7.4},
+    {"nome": "LumenSolar", "cidade": "Teresina - PI", "preco_medio": 3.85, "relevancia": 7.3}
+  ]
+}
