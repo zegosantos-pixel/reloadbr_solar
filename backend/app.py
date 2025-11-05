@@ -1,4 +1,7 @@
-try:`n    from scraping import agendar_atualizacao`nexcept ImportError:`n    from backend.scraping import agendar_atualizacao
+try:
+    from scraping import agendar_atualizacao
+except ImportError:
+    from backend.scraping import agendar_atualizacao
 
 # Inicia o agendamento automático de scraping semanal
 agendar_atualizacao()
